@@ -1,4 +1,54 @@
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+ul, li, a {
+  all: unset;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+header .logo {
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+}
+header nav {
+  font-size: 1rem;
+  font-weight: 600;
+}
+header nav ul {
+  display: flex;
+  gap: 2rem;
+}
+header .menu-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+header .menu-wrapper .burger-button {
+  all: unset;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: larger;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+  .globe {
+    display: none;
+  }
 }/*# sourceMappingURL=styles.css.map */
