@@ -47,7 +47,8 @@ header .menu-wrapper .burger-button {
 
 main {
   display: flex;
-  padding: 0.5rem 0.5rem 2rem 1rem;
+  flex-direction: column;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -63,19 +64,22 @@ main .title {
 main .title h6 {
   width: 13%;
   margin-top: 0;
+  font-style: italic;
 }
 main .title h1 {
   display: flex;
   height: 100%;
   margin: 0;
-  font-size: 3.2rem;
+  font-size: 3.5rem;
+  font-weight: 800;
   align-items: end;
+  width: 30%;
 }
 main .title .arrow {
   all: unset;
   cursor: pointer;
   height: 100%;
-  width: 60%;
+  width: 30%;
   display: flex;
   justify-content: flex-end;
   align-items: end;
@@ -83,6 +87,29 @@ main .title .arrow {
 }
 main .title .arrow .fa-solid {
   text-align: right;
+}
+main .card-wrapper {
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+main .card-wrapper .card {
+  display: flex;
+  flex-direction: column;
+  height: 33rem;
+  padding: 1rem;
+  background-color: rgb(240, 240, 240);
+}
+main .card-wrapper .card .card-image {
+  width: 100%;
+}
+main .card-wrapper .card .card-image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .card-wrapper .card .paragraph {
+  font-size: 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -94,5 +121,10 @@ main .title .arrow .fa-solid {
   }
   h6 {
     display: none;
+  }
+}
+@media (max-width: 610px) {
+  h1 {
+    width: 70% !important;
   }
 }/*# sourceMappingURL=styles.css.map */
