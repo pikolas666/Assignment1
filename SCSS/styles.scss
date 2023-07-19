@@ -95,7 +95,7 @@ main{
             
         }
 
-        h1{
+        .main-text{
             display: flex;
             height: 100%;
             margin:0;
@@ -103,6 +103,7 @@ main{
             font-weight: 800;
             align-items:end;
             width:40%;
+            
         }
         .arrow{
             all: unset;
@@ -307,6 +308,7 @@ h6{
     left:-50px;
     padding-top: 8rem!important;
 }
+}
 @media (max-width: 1200px){
 .card-image{
     min-width: 60%;
@@ -319,10 +321,15 @@ h6{
     }
 }
 @media (max-width: 640px){
-    h1{
-        
-        min-width: 70%!important;
-        
-    }
-}
-}
+    main{
+
+        .title{
+            .main-text {
+                font-size: 3rem!important;
+                min-width: 70%!important;
+                
+                
+            }
+        }
+        }
+}  
