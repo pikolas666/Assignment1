@@ -159,7 +159,7 @@ main .load-button img {
   height: 100%;
 }
 main h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   padding-top: 4rem;
 }
 main .publication {
@@ -253,6 +253,12 @@ main .publication .seismic {
   .load-button {
     width: 30% !important;
     align-self: center;
+  }
+  h2 {
+    align-self: center;
+    position: relative;
+    left: -50px;
+    padding-top: 8rem !important;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {

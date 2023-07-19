@@ -184,7 +184,7 @@ main{
         }
     }
     h2{
-        font-size: 2.5rem;
+        font-size: 2.8rem;
         padding-top: 4rem;
     }
     .publication{
@@ -300,6 +300,12 @@ h6{
 .load-button{
     width:30%!important;
     align-self: center;
+}
+h2{
+    align-self: center;
+    position: relative;
+    left:-50px;
+    padding-top: 8rem!important;
 }
 @media (max-width: 1200px){
 .card-image{
