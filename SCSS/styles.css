@@ -14,15 +14,17 @@ header {
   height: 3rem;
   padding: 0.5rem 1rem;
   background-color: white;
-  position: sticky;
+  position: fixed;
   top: 0;
   width: 100%;
   box-sizing: border-box;
+  z-index: 2;
 }
 header .logo {
   font-size: 1.8rem;
   font-weight: 700;
   cursor: pointer;
+  letter-spacing: 3px;
 }
 header nav {
   font-size: 1rem;
@@ -38,6 +40,9 @@ header .menu-wrapper {
   align-items: center;
   font-size: 1.8rem;
 }
+header .menu-wrapper .globe {
+  cursor: pointer;
+}
 header .menu-wrapper .burger-button {
   all: unset;
   background-color: transparent;
@@ -46,6 +51,7 @@ header .menu-wrapper .burger-button {
 }
 
 main {
+  margin-top: 3rem;
   display: flex;
   flex-direction: column;
   padding: 0.5rem 1rem 0.5rem 1rem;
@@ -141,6 +147,64 @@ main .load-button img {
   width: 3rem;
   height: 100%;
 }
+main h2 {
+  font-size: 2.5rem;
+  padding-top: 4rem;
+}
+main .publication {
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+main .publication .cube {
+  position: relative;
+  height: 0;
+  width: 100%;
+  padding-top: 100%;
+  background-color: rgb(42, 139, 237);
+}
+main .publication .cube .cube-contents {
+  position: absolute;
+  top: 0;
+  padding: 1rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  box-sizing: border-box;
+  width: 100%;
+}
+main .publication .cube .cube-contents .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  letter-spacing: 3px;
+  color: white;
+}
+main .publication .cube .cube-contents h2 {
+  font-size: 3rem;
+}
+main .publication .cube .cube-contents .p-buton-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+main .publication .cube .cube-contents .p-buton-container button {
+  all: unset;
+  height: 3rem;
+  width: 5rem;
+  cursor: pointer;
+}
+main .publication .cube .cube-contents .p-buton-container button img {
+  width: 90%;
+  height: 90%;
+}
+main .publication .seismic {
+  background-color: rgb(0, 0, 0);
+}
 
 @media (max-width: 768px) {
   nav {
@@ -170,6 +234,9 @@ main .load-button img {
   }
   .card img {
     height: 100% !important;
+  }
+  .publication {
+    grid-template-columns: 1fr 1fr !important;
   }
 }
 @media (min-width: 992px) and (max-width: 1200px) {

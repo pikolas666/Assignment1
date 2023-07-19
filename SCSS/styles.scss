@@ -4,6 +4,12 @@ $cardColorgrey: rgb(240, 240, 240);
     display: flex;
     gap:2rem;
 }
+@mixin logo{
+    font-size: 1.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 3px;
+}
 body{
     margin:0;
     font-family: 'Roboto', sans-serif;
@@ -22,15 +28,13 @@ header{
     height: 3rem;
     padding: 0.5rem 1rem;
     background-color: white;
-    position: sticky;
+    position: fixed;
     top:0;
     width: 100%;
     box-sizing: border-box;
-    
+    z-index: 2;
     .logo{
-        font-size: 1.8rem;
-        font-weight: 700;
-        cursor: pointer;
+        @include logo();
     }
     nav{
         font-size: 1rem;
@@ -44,6 +48,9 @@ header{
         @include flex-gap();
         align-items: center;
         font-size: 1.8rem;
+        .globe{
+            cursor: pointer;
+        }
 
         .burger-button{
             all:unset;
@@ -57,6 +64,7 @@ header{
 
 }
 main{
+    margin-top: 3rem;
     display: flex;
     flex-direction: column;
     padding: 0.5rem 1rem 0.5rem 1rem;
@@ -163,6 +171,70 @@ main{
             height: 100%;
         }
     }
+    h2{
+        font-size: 2.5rem;
+        padding-top: 4rem;
+    }
+    .publication{
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:2rem;
+
+        
+        .cube{
+           
+            position: relative;
+            height:0;
+            width:100%;
+            padding-top:100%;
+            background-color: rgb(42, 139, 237);
+
+            .cube-contents{
+                position: absolute;
+                top:0;
+                padding: 1rem;
+                display: flex;
+                height: 100%;
+                flex-direction: column;
+                justify-content: space-between;
+                color: white;
+                box-sizing: border-box;
+                width: 100%;
+
+
+                 .logo{
+                    @include logo();
+                    color: white;
+                }
+
+                h2{
+                    font-size: 3rem;
+                }
+                .p-buton-container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+
+                    button{
+                        all:unset;
+                        height: 3rem;
+                        width: 5rem;
+                        cursor: pointer;
+                        
+                        img{
+                            width: 90%;
+                            height: 90%;
+                        }
+                    }
+                }
+            }
+        }
+        .seismic{
+            background-color: rgb(0, 0, 0);
+        }
+    }
 }
 
 
@@ -204,7 +276,13 @@ h6{
         height: 100%!important;
         
         }
+        
     
+}
+.publication{
+   
+    grid-template-columns: 1fr 1fr!important;
+  
 }
 @media (max-width: 1200px){
 .card-image{
