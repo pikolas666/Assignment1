@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
+  overflow: hidden;
 }
 
 ul, li, a {
@@ -14,7 +15,7 @@ header {
   height: 2rem;
   padding: 0.5rem 1rem;
   background-color: white;
-  position: fixed;
+  position: sticky;
   top: 0;
   width: 100%;
   box-sizing: border-box;
@@ -44,11 +45,57 @@ header .menu-wrapper .burger-button {
   font-size: larger;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem 2rem 1rem;
+  height: 13rem;
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(249, 249, 249);
+}
+main .title {
+  display: flex;
+  align-items: center;
+  height: 10rem;
+  width: 100%;
+  justify-content: space-between;
+}
+main .title h6 {
+  width: 13%;
+  margin-top: 0;
+  padding-top: 6.5rem;
+  height: 100%;
+}
+main .title h1 {
+  display: flex;
+  height: 100%;
+  margin: 0;
+  font-size: 3.2rem;
+  align-items: end;
+}
+main .title .arrow {
+  all: unset;
+  cursor: pointer;
+  height: 100%;
+  width: 60%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: end;
+  font-size: 4rem;
+}
+main .title .arrow .fa-solid {
+  text-align: right;
+}
+
 @media (max-width: 768px) {
   nav {
     display: none;
   }
   .globe {
+    display: none;
+  }
+  h6 {
     display: none;
   }
 }/*# sourceMappingURL=styles.css.map */
