@@ -247,6 +247,18 @@ main .publication .seismic {
   .card img {
     height: 100% !important;
   }
+  .third {
+    order: 1;
+  }
+  .hidden {
+    order: 2;
+  }
+  .first {
+    order: 3;
+  }
+  .second {
+    order: 4;
+  }
   .publication {
     grid-template-columns: 1fr 1fr !important;
   }
@@ -259,6 +271,12 @@ main .publication .seismic {
     position: relative;
     left: -50px;
     padding-top: 8rem !important;
+  }
+  .text-content-wrapper .paragraph {
+    order: 2;
+  }
+  .text-content-wrapper .date {
+    order: 1;
   }
 }
 @media (max-width: 1200px) {

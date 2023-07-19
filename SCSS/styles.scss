@@ -293,6 +293,18 @@ h6{
         
     
 }
+.third {
+    order:1;
+}
+.hidden {
+    order:2;
+}
+.first {
+    order:3;
+}
+.second {
+    order:4;
+}
 .publication{
    
     grid-template-columns: 1fr 1fr!important;
@@ -307,6 +319,16 @@ h6{
     position: relative;
     left:-50px;
     padding-top: 8rem!important;
+}
+.text-content-wrapper{
+    
+    .paragraph {
+        
+        order:2
+    }
+    .date{
+        order:1
+    }
 }
 }
 @media (max-width: 1200px){
