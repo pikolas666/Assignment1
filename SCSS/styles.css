@@ -85,7 +85,7 @@ main .title h1 {
   font-size: 3.5rem;
   font-weight: 800;
   align-items: end;
-  width: 30%;
+  width: 40%;
 }
 main .title .arrow {
   all: unset;
@@ -273,6 +273,6 @@ main .publication .seismic {
 }
 @media (min-width: 992px) and (max-width: 640px) {
   h1 {
-    width: 70% !important;
+    min-width: 70% !important;
   }
 }/*# sourceMappingURL=styles.css.map */
