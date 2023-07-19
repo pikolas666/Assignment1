@@ -19,7 +19,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 2rem;
+    height: 3rem;
     padding: 0.5rem 1rem;
     background-color: white;
     position: sticky;
@@ -28,7 +28,7 @@ header{
     box-sizing: border-box;
     
     .logo{
-        font-size: 25px;
+        font-size: 1.8rem;
         font-weight: 700;
         cursor: pointer;
     }
@@ -43,6 +43,7 @@ header{
 
         @include flex-gap();
         align-items: center;
+        font-size: 1.8rem;
 
         .burger-button{
             all:unset;
@@ -113,9 +114,10 @@ main{
             display: flex;
             // cia keist direction desktopui
             flex-direction: column;
-            height:40rem;
+            height:47rem;
             padding: 1rem;
             background-color: $cardColorgrey;
+            margin-top: 0.5rem;
 
             .card-image{
                 width: 100%;
@@ -157,12 +159,45 @@ nav{
 h6{
     display:none;
 }
-
-}
-@media (min-width: 768px){
 .hidden{
     display: none!important;
 }
+.card{
+    
+   
+    height:40rem!important;
+
+}
+}
+@media (min-width: 992px){
+
+.card-wrapper {
+    
+    grid-template-columns: 1fr 1fr!important;
+}
+.card{
+    
+    flex-direction: row!important;
+    height:25rem!important;
+    gap:1.5rem;
+  
+    img{
+        
+        height: 100%!important;
+        
+        }
+    
+}
+@media (max-width: 1200px){
+.card-image{
+    min-width: 60%;
+    
+}
+}
+@media (min-width: 1200px){
+    .card-image{
+        max-width: 40%!important;
+    }
 }
 @media (max-width: 640px){
     h1{
@@ -170,4 +205,5 @@ h6{
         width: 70%!important;
         
     }
+}
 }

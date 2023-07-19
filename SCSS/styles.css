@@ -11,7 +11,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 2rem;
+  height: 3rem;
   padding: 0.5rem 1rem;
   background-color: white;
   position: sticky;
@@ -20,7 +20,7 @@ header {
   box-sizing: border-box;
 }
 header .logo {
-  font-size: 25px;
+  font-size: 1.8rem;
   font-weight: 700;
   cursor: pointer;
 }
@@ -36,6 +36,7 @@ header .menu-wrapper {
   display: flex;
   gap: 2rem;
   align-items: center;
+  font-size: 1.8rem;
 }
 header .menu-wrapper .burger-button {
   all: unset;
@@ -96,9 +97,10 @@ main .card-wrapper {
 main .card-wrapper .card {
   display: flex;
   flex-direction: column;
-  height: 40rem;
+  height: 47rem;
   padding: 1rem;
   background-color: rgb(240, 240, 240);
+  margin-top: 0.5rem;
 }
 main .card-wrapper .card .card-image {
   width: 100%;
@@ -133,13 +135,37 @@ main .card-wrapper .card .text-content-wrapper .date {
   h6 {
     display: none;
   }
-}
-@media (min-width: 768px) {
   .hidden {
     display: none !important;
   }
+  .card {
+    height: 40rem !important;
+  }
 }
-@media (max-width: 640px) {
+@media (min-width: 992px) {
+  .card-wrapper {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .card {
+    flex-direction: row !important;
+    height: 25rem !important;
+    gap: 1.5rem;
+  }
+  .card img {
+    height: 100% !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+  .card-image {
+    min-width: 60%;
+  }
+}
+@media (min-width: 992px) and (min-width: 1200px) {
+  .card-image {
+    max-width: 40% !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 640px) {
   h1 {
     width: 70% !important;
   }
